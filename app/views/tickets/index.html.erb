@@ -1,0 +1,39 @@
+<h1>Listing tickets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tutor</th>
+      <th>Session type</th>
+      <th>Student</th>
+      <th>Student</th>
+      <th>Instructor</th>
+      <th>Course</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td><%= ticket.tutor.name %></td>
+        <td><%= ticket.session_type %></td>
+        <td><%= ticket.student_id %></td>
+        <td><%= ticket.student %></td>
+        <td><%= ticket.instructor.name %></td>
+        <td><%= ticket.course_id %></td>
+        <td><%= ticket.notes %></td>
+        <td><%= link_to 'Show', ticket %></td>
+        <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ticket', new_ticket_path %>

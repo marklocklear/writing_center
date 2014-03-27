@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tutor:</strong>
+  <%= @ticket.tutor_id %>
+</p>
+
+<p>
+  <strong>Session type:</strong>
+  <%= @ticket.session_type %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @ticket.student_id %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @ticket.student %>
+</p>
+
+<p>
+  <strong>Instructor:</strong>
+  <%= @ticket.instructor_id %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @ticket.course_id %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @ticket.notes %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>
